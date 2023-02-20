@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="utf-8">
+<title>Gestione Dispositivi</title>
+<style>
+body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+
+.image {
+	background-image:
+		url("https://static.vecteezy.com/ti/vettori-gratis/p3/1849553-sfondo-oro-moderno-gratuito-vettoriale.jpg");
+	background-color: #cccccc;
+	height: 100vh;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.testo {
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+}
+
+.btn {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: #00394F;
+	border: 5px solid #002630;
+	color: white;
+	font-size: 16px;
+	border-radius: 20px;
+	cursor: pointer;
+	box-shadow: 1px 1px 10px 2px black;
+	transition: 0.5s ease;
+}
+
+.btn:hover {
+	background-color: #F79900;
+	 transform: scale(1.1);
+}
+
+a {
+	text-decoration: none;
+}
+
+#github {
+	transition: 0.5s ease;
+}
+
+#github:hover {
+	 transform: scale(1.1);
+}
+</style>
+</head>
+<body>
+	<div class="image">
+		<div class="testo">
+			<h1 style="font-size: 5em;">Benvenuti nella homepage</h1>
+			<h2>Progetto settimale BE-06-22-S6-L5</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+				do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+				enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+				ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+				reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+				pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+				culpa qui officia deserunt mollit anim id est laborum.</p>
+			<a href="http://localhost:8080/login" class="btn">Vai al login</a>
+			<div style="margin-top: 4em;">
+				<a href="https://github.com/GlobuloBianco/BE-06-22-S6-L5-Weekly-Project" target="_blank"><img id="github" style="border-radius: 50%; box-shadow: 1px 1px 10px 2px black" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="Github lgoo" width="50" height="50"></a>
+			</div>
+		</div>
+	</div>
+</body>
+</body>
+</html>

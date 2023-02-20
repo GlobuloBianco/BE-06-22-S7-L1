@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="utf-8">
+<title>HomePage</title>
+<link
+	href="https://fonts.googleapis.com/css2?family=Mynerve&display=swap"
+	rel="stylesheet">
+<style>
+body {
+	background-image:
+		url("https://static.vecteezy.com/system/resources/previews/004/996/055/original/orange-modern-abstract-background-modern-orange-abstract-design-concept-of-web-page-design-easy-to-edit-illustration-vector.jpg");
+	background-color: #cccccc;
+	height: 100vh;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	font-family: 'Mynerve', cursive;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 30vw;
+	background-color: white;
+	border-radius: 50%;
+	aspect-ratio: 1/1;
+	border: 10px solid #FE5300;
+	outline: 30px double white;
+	text-align: center;
+	font-size: 2em;
+}
+
+#logout {
+	border-radius: 50px;
+	padding: 1em;
+	font-size: 0.5em;
+	margin-top: -30px;
+	font-family: "Lucida Console", "Courier New", monospace;
+	border: 5px solid white;
+	box-shadow: 1px 1px 5px 5px #fc4e03; background-color : #fc4e03;
+	transition: 0.5s ease;
+	color: white;
+	background-color: #fc4e03;
+}
+
+#logout:hover {
+	cursor: pointer;
+	background-color: white;
+	transform: scale(1.2);
+	color: black;
+	border: 3px solid black;
+	box-shadow: none;
+}
+</style>
+</head>
+<body>
+
+	<div class="container">
+		<h2 id="username" style="font-size: 1.5em; margin-bottom: -10px;">Benvenuto</h2>
+		<h3 id="ruolo" style="font-size: 1em;">Ruolo</h3>
+		<!-- Logout -->
+		<form action="/logout" method="post">
+			<button type="submit" id="logout">Logout</button>
+		</form>
+	</div>
+
+	<script>
+	//saluto + nome login
+	fetch('/profilo')
+	  .then(response => response.json())
+	  .then(data => {
+	    document.getElementById('username').innerHTML = 'Bentornato ' + data.username + "!";
+	    //controllo ruoloe stampa
+	    let ruolo = data.authorities[0].authority == "ROLE_ADMIN" ? "Admin" : "Utente";
+	    document.getElementById('ruolo').innerHTML = 'Il tuo livello di permesso è di "' + ruolo + '".';
+	  });
+	</script>
+</body>
+</html>

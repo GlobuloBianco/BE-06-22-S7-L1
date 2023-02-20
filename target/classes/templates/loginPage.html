@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Login</title>
+<link
+	href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+	rel="stylesheet" />
+<style>
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+	outline-color: #001F2C;
+}
+
+body {
+	min-height: 100vh;
+	display: grid;
+	place-items: center;
+	background-color: #e2e8f0;
+	background-image:
+		url("https://static.vecteezy.com/ti/vettori-gratis/p3/1849553-sfondo-oro-moderno-gratuito-vettoriale.jpg");
+	background-color: #cccccc;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+p {
+	font-size: 14px;
+	color: #6b7280;
+}
+
+.form {
+	width: 480px;
+	padding: 32px;
+	border-radius: 20px;
+	background-color: #ffffff;
+	box-shadow: 2px 4px 8px #6b728040;
+	text-align: center;
+}
+
+.form-esterno {
+	background-color: #ffffff99;
+	padding: 2.5em;
+	border-radius: 20px;
+}
+
+.header {
+	margin-bottom: 24px;
+}
+
+.header h1 {
+	font-weight: bolder;
+	font-size: 28px;
+	color: #003F57;
+}
+
+.input {
+	position: relative;
+	margin-bottom: 12px;
+}
+
+.input input {
+	width: 100%;
+	border: none;
+	padding: 8px 40px;
+	border-radius: 4px;
+	background-color: #f3f4f6;
+	color: #1f2937;
+	font-size: 16px;
+}
+
+.input input::placeholder {
+	color: #6b7280;
+}
+
+.input i {
+	top: 50%;
+	width: 36px;
+	position: absolute;
+	transform: translateY(-50%);
+	color: #6b7280;
+	font-size: 16px;
+}
+
+.btn {
+	width: 100%;
+	border: none;
+	padding: 8px 0;
+	margin: 12px 0;
+	border-radius: 4px;
+	background-color: #003F57;
+	color: #ffffff;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.btn:active {
+	background-color: #4f46e5;
+	transition: all 0.3s ease;
+}
+
+a {
+	color: #001F2C;
+	text-decoration: none;
+}
+</style>
+</head>
+<body>
+	<div class="form-esterno">
+		<div class="form">
+			<div class="container">
+				<div class="header">
+					<h1>Login:</h1>
+					<p>Inserisci l'username e la password</p>
+				</div>
+				<form action="/loginPage" method="post">
+					<div class="input">
+						<input type="text" class="form-control" id="username"
+							name="username" placeholder="Username">
+					</div>
+					<div class="input">
+						<input type="password" class="form-control" id="password"
+							name="password" placeholder="Password">
+					</div>
+					<input class="btn" type="submit" value="LOGIN" />
+				</form>
+				<p>
+					<a href="http://localhost:8080/">Torna indietro.</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
